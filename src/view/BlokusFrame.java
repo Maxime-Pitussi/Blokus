@@ -147,7 +147,7 @@ public class BlokusFrame extends JFrame{
 	public BlokusFrame(){
 		super();
 
-		son.start();
+		// son.start();
 
 		this.setTitle("Blokus");
      	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
