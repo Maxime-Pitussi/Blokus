@@ -1,0 +1,8 @@
+Testsuite: PieceTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,316 sec
+
+Testcase: testGetForme took 0,005 sec
+Testcase: testSetCouleur took 0 sec
+Testcase: testConstructeur took 0,001 sec
+Testcase: testGetCase took 0 sec
+Testcase: testSetCase took 0 sec

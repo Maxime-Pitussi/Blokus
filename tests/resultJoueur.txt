@@ -1,0 +1,10 @@
+Testsuite: JoueurTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,006 sec
+
+Testcase: testRetirerPieceJeuActif took 0,002 sec
+Testcase: testIncScoreEtGetScore took 0 sec
+Testcase: testSetCouleur took 0 sec
+Testcase: testGetTableauActif took 0 sec
+Testcase: testGetEquipe took 0 sec
+Testcase: testGetBot took 0,001 sec
+Testcase: testGetNum took 0 sec

@@ -1,0 +1,11 @@
+Testsuite: ModuleTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,074 sec
+
+Testcase: testRotaH took 0,001 sec
+Testcase: testRotaV took 0 sec
+Testcase: testValiderVerifier took 0,003 sec
+Testcase: testSelectionner took 0,001 sec
+Testcase: testVerifTourPossible took 0 sec
+Testcase: testTourDeBot took 0,06 sec
+Testcase: testPivotD took 0 sec
+Testcase: testPivotG took 0,001 sec

@@ -1,0 +1,55 @@
+<project>
+	<target name="clean">
+		<delete dir="../class"/>
+		<delete dir="../jar"/>
+	</target>
+
+	<target name="junit" depends="javadoc">
+		<delete dir="../tests" />
+		<mkdir dir="../tests" />
+		<junit printsummary="yes" haltonfailure="yes">
+		  <classpath>
+			<pathelement location="../src/tests"/>
+			<pathelement path="../class"/>
+		  </classpath>
+
+		  <formatter type="plain"/>
+		  <formatter type="xml"/>
+		  <test name="PieceTest" haltonfailure="no" outfile="../tests/resultPiece"/>
+		  <test name="JoueurTest" haltonfailure="no" outfile="../tests/resultJoueur"/>
+		  <test name="ModuleTest" haltonfailure="no" outfile="../tests/resultModule"/>
+		  <test name="PartieTest" haltonfailure="no" outfile="../tests/resultPartie"/>
+		</junit>
+	</target>
+	
+	<target name="junit-view" depends="junit">
+		<junitreport todir="../tests">
+		  <fileset dir="../tests/">
+			<include name="*.xml"/>
+		  </fileset>
+		  <report format="frames" todir="../tests/html"/>
+		</junitreport>
+	</target>
+
+	<target name="compile">
+		<mkdir dir="../class"/>
+		<javac srcdir="../src" destdir="../class"/>
+	</target>
+
+	<target name="javadoc" depends="compile">
+		<javadoc sourcepath="../src" access="private" author="true" version="true" destdir="../javadoc"/>
+	</target>
+
+	<target name="jar" depends="compile">
+		<mkdir dir="../jar"/>
+		<jar destfile="../jar/Blokus.jar" basedir="../class">
+			<manifest>
+				<attribute name="Main-Class" value="BlokusGraphique"/>
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="run" depends="jar">
+		<java jar="../jar/Blokus.jar" fork="true"/>
+	</target>
+</project>
